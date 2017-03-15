@@ -35,7 +35,7 @@
   var btnNextShow = function(param){
     var idx;
     $.get(param, function(func) {
-      idx = $(func).find(btnPrev);console.log(idx.length)
+      idx = $(func).find(btnPrev);
       idx.length && $(btnNext).attr("href",param).addClass('shown')
     });
   };
