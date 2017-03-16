@@ -96,7 +96,7 @@
     })
   };
   var getPrevPage = function(){
-    var $this = $wrapper.find(btnPrev);
+    var $this = $wrapper.find(btnPrev); console.log($this.length);
     $this.length && getPrevLink($this)
   };
 
