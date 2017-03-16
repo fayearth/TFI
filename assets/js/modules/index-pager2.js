@@ -40,6 +40,7 @@
         if($(btnNext).parent().hasClass("inactive")){
           $(btnNext).parent().removeClass("inactive")
         };
+	$wrapper.find(".shadow-next").remove();
         $(btnNext).attr("href",param).addClass('shown')
       }
     });
@@ -92,6 +93,7 @@
       if(btnPrev.parent().hasClass("inactive")){
         btnPrev.parent().removeClass("inactive")
       };
+      $wrapper.find(".shadow-prev").remove();
       btnPrev.attr("href","/"+pathPack[selector]).addClass("shown")
     })
   };
