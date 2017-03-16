@@ -8,7 +8,7 @@
       maxPost = 20,
       rscript = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
   var getNewLocation = function(path){
-    var newPathname = path.replace("+","%2B");
+    var newPathname = path.replace(/\+/,"%2B");
     return window.location.pathname+ "?updated-max=" +newPathname
   };
   var getFeeds = function(){
@@ -72,7 +72,7 @@
         return
       }
       var selector,pathPack = [""];
-      strUrl ? pathPack.push("search/label/" + substrUrl) : pathPack.push("?max-results=" + maxPosts());console.log(pathPack);
+      strUrl ? pathPack.push("search/label/" + substrUrl) : pathPack.push("?max-results=" + maxPosts());
       selector = 1;
       for (var count = 2; count <= entryLength; count++) {
         var chosenFeed = (count - 1) * maxPosts() - 1,
@@ -96,7 +96,7 @@
     })
   };
   var getPrevPage = function(){
-    var $this = $wrapper.find(btnPrev); console.log($this.length);
+    var $this = $wrapper.find(btnPrev);
     $this.length && getPrevLink($this)
   };
 
