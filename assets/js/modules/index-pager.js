@@ -97,9 +97,7 @@
   };
   var getPrevPage = function(){
     var $this = $wrapper.find(btnPrev);
-    if($this.length>0){
-      getPrevLink($this)
-    }
+    $this.length && getPrevLink($this)
   };
 
   tfi.modules.indexpager = {
