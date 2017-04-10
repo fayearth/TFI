@@ -15,7 +15,7 @@ var twemoji=function(){"use strict";var twemoji={base:"https://twemoji.maxcdn.co
   }
   function f(a, d) {
     var e; console.log(g.base),
-    e = {
+    return g && a && ("string" == typeof a || a.childNodes && a.childNodes.length) && (e = {
       base: c() ? b.svgUrl : b.baseUrl,
       ext: c() ? b.svgExt : b.ext,
       className: b.className ? b.className : "emoji",
@@ -23,7 +23,7 @@ var twemoji=function(){"use strict";var twemoji={base:"https://twemoji.maxcdn.co
         switch (a) {case "a9": case "ae": case "2122": return !1 }
         return "".concat(c.base, a, c.ext)
       }
-    }, g.parse(a, e)
+    }, g.parse(a, e))
   }
   var g, h, i, j = a.document, k = !1, l = 0;
   return b && (b.DOMReady ? d() : b.readyCallback = d), {
