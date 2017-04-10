@@ -23,10 +23,9 @@ var twemoji=function(){"use strict";var twemoji={base:"https://twemoji.maxcdn.co
       ext: b.ext && (c() ? b.ext : g.ext) || g.ext,
       className: b.className || "emoji",
       size: b.folder || tes(b.size || g.size),
-      folder: b.folder,
       callback: function(a, c) {
         switch (a) {case "a9": case "ae": case "2122": return !1 }
-        return "".concat(c.base, a, c.ext)
+        return "".concat(c.base, c.size, a, c.ext)
       },
       onerror: function() {
         g.parentNode && g.parentNode.replaceChild(j.createTextNode(g.alt), g)
