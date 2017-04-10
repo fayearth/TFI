@@ -16,7 +16,7 @@ var twemoji=function(){"use strict";var twemoji={base:"https://twemoji.maxcdn.co
   function f(a, d) {
     var e;
     return g && a && ("string" == typeof a || a.childNodes && a.childNodes.length) ? ( d = d || {}, console.log(g.base), e = {
-      base: c() ? b.svgUrl || g.base+b.svgExt : b.baseUrl,
+      base: c() ? (b.svgUrl || g.base+b.svgExt) : b.baseUrl,
       ext: c() ? b.svgExt : b.ext,
       className: b.className ? b.className : "emoji",
       callback: function(a, c) {
