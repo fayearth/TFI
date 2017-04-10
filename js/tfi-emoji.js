@@ -13,15 +13,19 @@ var twemoji=function(){"use strict";var twemoji={base:"https://twemoji.maxcdn.co
       g = a.twemoji, k = !0, f(j.body)
     }
   }
+  function tes(value){
+    return typeof value === 'number' ? value + 'x' + value : value
+  }
   function f(a, d) {
     var e;
-    return g && a && ("string" == typeof a || a.childNodes && a.childNodes.length) ? ( d = d || {}, e = {
-      base: c() ? b.svgUrl : b.baseUrl,
-      ext: c() ? b.svgExt : b.ext,
-      className: b.className ? b.className : "emoji",
+    return g && a && ("string" == typeof a || a.childNodes && a.childNodes.length) ? ( e = {
+      base: b.base ? b.base : g.base,
+      ext: b.ext && (c() ? b.ext : g.ext) || g.ext,
+      size: b.folder || tes(b.size || g.size),
+      className: b.className || "emoji",
       callback: function(a, c) {
         switch (a) {case "a9": case "ae": case "2122": return !1 }
-        return "".concat(c.base, a, c.ext)
+        return "".concat(c.base, c.size, a, c.ext)
       },
       onerror: function() {
         g.parentNode && g.parentNode.replaceChild(j.createTextNode(g.alt), g)
