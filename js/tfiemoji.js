@@ -21,8 +21,9 @@ var twemoji=function(){"use strict";var twemoji={base:"https://twemoji.maxcdn.co
     return g && a && ("string" == typeof a || a.childNodes && a.childNodes.length) ? (console.log(b.folder), e = {
       base: b.base ? b.base : g.base,
       ext: b.ext && (c() ? b.ext : g.ext) || g.ext,
-      size: b.folder || tes(b.size || g.size),
       className: b.className || "emoji",
+      size: b.folder || tes(b.size || g.size),
+      folder: b.folder,
       callback: function(a, c) {
         switch (a) {case "a9": case "ae": case "2122": return !1 }
         return "".concat(c.base, a, c.ext)
