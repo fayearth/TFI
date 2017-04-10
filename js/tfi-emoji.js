@@ -14,7 +14,7 @@ var twemoji=function(){"use strict";var twemoji={base:"https://twemoji.maxcdn.co
     }
   }
   function f(a, d) {
-    var e; console.log(d.base),
+    var e; console.log(g.base),
     e = {
       base: c() ? b.svgUrl : b.baseUrl,
       ext: c() ? b.svgExt : b.ext,
