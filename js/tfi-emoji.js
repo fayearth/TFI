@@ -7,26 +7,29 @@ var twemoji=function(){"use strict";var twemoji={base:"https://twemoji.maxcdn.co
   function d(){
     if (!k) {
       if ("undefined" == typeof a.twemoji) {
-        if (l > 600) return;
-        return a.clearTimeout(h), h = a.setTimeout(d, 50), void l++
+        if (i > 600) return;
+        return a.clearTimeout(h), h = a.setTimeout(d, 50), void i++
       }
       g = a.twemoji, k = !0, f(j.body)
     }
   }
   function f(a, d) {
     var e;
-    return g && a && ("string" == typeof a || a.childNodes && a.childNodes.length) ? ( d = d || {}, console.log(g.base), e = {
-      base: c() ? (b.svgUrl || g.base+b.svgExt) : b.baseUrl,
+    return g && a && ("string" == typeof a || a.childNodes && a.childNodes.length) ? ( d = d || {}, e = {
+      base: c() ? b.svgUrl : b.baseUrl,
       ext: c() ? b.svgExt : b.ext,
       className: b.className ? b.className : "emoji",
       callback: function(a, c) {
         switch (a) {case "a9": case "ae": case "2122": return !1 }
         return "".concat(c.base, a, c.ext)
+      },
+      onerror: function() {
+        g.parentNode && g.parentNode.replaceChild(j.createTextNode(g.alt), g)
       }
     }, g.parse(a, e)) : a
   }
-  var g, h, i, j = a.document, k = !1, l = 0;
+  var g, h, i = 0, j = a.document, k = !1;
   return b && (b.DOMReady ? d() : b.readyCallback = d), {
     parse: f
   }
-}(window,window.tfiemojiConfig);
+}(window,window.fayemojiConfig);
