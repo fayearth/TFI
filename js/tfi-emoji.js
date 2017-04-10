@@ -18,7 +18,7 @@ var twemoji=function(){"use strict";var twemoji={base:"https://twemoji.maxcdn.co
   }
   function f(a, d) {
     var e;
-    return g && a && ("string" == typeof a || a.childNodes && a.childNodes.length) ? ( e = {
+    return g && a && ("string" == typeof a || a.childNodes && a.childNodes.length) ? (console.log(b.folder), e = {
       base: b.base ? b.base : g.base,
       ext: b.ext && (c() ? b.ext : g.ext) || g.ext,
       size: b.folder || tes(b.size || g.size),
